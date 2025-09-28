@@ -1,0 +1,17 @@
+export const VALID_GENRES = Object.freeze([
+    "House",
+    "Techno",
+    "Trance",
+    "Dubstep",
+    "Drum and Bass",
+    "Electro",
+    "Progressive",
+    "Hardstyle",
+    "Future Bass",
+    "Trap",
+    "Ambient",
+    "Breakbeat",
+    "Deep House",
+    "Garage",
+    "Melodic House",
+]);
