@@ -34,7 +34,7 @@ const EditRecord = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
       <div className="max-w-lg w-full bg-white p-6 rounded-lg shadow-md">
         <h1 className="text-3xl font-bold mb-4">Edit Record</h1>
-        <RecordForm record={record} onSubmit={handleUpdate} />
+        <RecordForm record={record || undefined} onSubmit={handleUpdate} />
         <Button href={`/records/${id}`}>Back to Record Details</Button>
       </div>
     </div>
