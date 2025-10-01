@@ -23,8 +23,8 @@ class RecordModel(Base):
 
 
 engine = create_engine(
-    f'sqlite:///{STATIC_CONFIG["db_path"]}',
-    connect_args={"check_same_thread": False}
+    STATIC_CONFIG.get("DATABASE_URL", f'sqlite:///{STATIC_CONFIG["db_path"]}'),
+    connect_args={"check_same_thread": False} if "sqlite" in STATIC_CONFIG.get("DATABASE_URL", "") else {}
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
