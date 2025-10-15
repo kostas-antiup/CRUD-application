@@ -30,4 +30,4 @@ logger.addHandler(logging.StreamHandler(stream=sys.stdout))
 
 if __name__ == "__main__":
     logger.info("Starting application")
-    uvicorn.run(app, host='0.0.0.0', port=STATIC_CONFIG["backend_port"], log_level="info")
+    uvicorn.run(app, host='0.0.0.0', port=STATIC_CONFIG["backend_port"], log_level="info", forwarded_allow_ips="*")
