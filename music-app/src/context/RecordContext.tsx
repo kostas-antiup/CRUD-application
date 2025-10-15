@@ -12,7 +12,7 @@ interface DIProviderProps {
 const DIContext = createContext<{ container: typeof container } | null>(null);
 
 export const DIProvider: React.FC<DIProviderProps> = ({ children}) => {
-  container.registerInstance(RecordModel, new RecordModel(process.env.NEXT_PUBLIC_BACKEND_URL));
+  container.registerInstance(RecordModel, new RecordModel(process.env.BACKEND_URL));
 
   return (
     <DIContext.Provider value={{ container }}>
